@@ -149,6 +149,8 @@ def detect(save_img=False):
                     s += f"{n} {names[int(c)]}{'s' * (n > 1)}, "  # add to string
                     tot,align_bottom,align_right = count(founded_classes=founded_classes,im0=im0)  # Applying counter function
                     align_bottom=align_bottom-35                                                   
+                
+                # Printing The Timer And Displaying the Count
                 cv2.putText(im0, str(f"Total : {tot}") ,(int(align_right),align_bottom), cv2.FONT_HERSHEY_SIMPLEX, 1,(45,255,255),1,cv2.LINE_AA)
                 print("\nTotal Vehicles In Frame:", tot)
                 if(90-tot*1.5<20):
